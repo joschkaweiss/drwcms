@@ -6,10 +6,12 @@ RESTful API for Dr. W. CMS
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+from flask_cors import CORS
 import os
 
 # Initialisiere app / init app
 app = Flask(__name__)
+cors = CORS(app)
 basedir = os.path.abspath(os.path.dirname(__file__))
 # Datenbank Konfiguration / db config
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'db.sqlite')
