@@ -370,4 +370,4 @@ Server Konf. / Server Conf.
 # Starte Server / Setze debug auf false, wenn fertig implementiert
 # Run Server / Set debug to false when in production
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run(host='0.0.0.0', port=80)
